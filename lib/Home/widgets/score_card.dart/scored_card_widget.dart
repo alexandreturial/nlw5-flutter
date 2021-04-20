@@ -4,10 +4,19 @@ import 'package:nlw5/core/app_colors.dart';
 import 'package:nlw5/core/app_text_styles.dart';
 
 class ScoreCardWidget extends StatelessWidget {
+  
+
   @override
   Widget build(BuildContext context) {
+    Size screenSize = MediaQuery.of(context).size;
+
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20),
+      padding: EdgeInsets.symmetric(
+        horizontal: screenSize.width > 700 ? 
+          screenSize.width * 0.2 
+        : 
+          screenSize.width * 0.08
+        ),
       child: Container(
         height: 136,
         decoration: BoxDecoration(
@@ -22,7 +31,7 @@ class ScoreCardWidget extends StatelessWidget {
             Expanded(
               flex: 3,
               child: Padding(
-                padding: const EdgeInsets.only(left: 14),
+                padding: EdgeInsets.only(left: screenSize.width * 0.01),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.center,

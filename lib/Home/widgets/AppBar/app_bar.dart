@@ -3,7 +3,9 @@ import 'package:nlw5/Home/widgets/score_card.dart/scored_card_widget.dart';
 import 'package:nlw5/core/core.dart';
 
 class AppBarWidget extends PreferredSize {
-  AppBarWidget() : super(
+  
+
+  AppBarWidget(Size screenSize) : super(
     preferredSize: Size.fromHeight(250),
     child: Container(
       height: 250,
@@ -13,7 +15,7 @@ class AppBarWidget extends PreferredSize {
           Container(
             height: 161,
             width: double.maxFinite,
-            padding: EdgeInsets.symmetric(horizontal: 20),
+            padding: EdgeInsets.symmetric(horizontal: screenSize.width * 0.07),
             decoration: BoxDecoration(
               gradient: AppGradients.linear,
             ),
